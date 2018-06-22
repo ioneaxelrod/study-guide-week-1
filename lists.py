@@ -318,7 +318,12 @@ def reverse_list_in_place(items):
         >>> orig
         ['I', 'love', 'cookies']
     """
-    
+
+    list_length = len(items)
+
+    for i in range(list_length//2):
+        items[i], items[ list_length -1 - i] = items[list_length -1 - i], items[i]
+
 
 def duplicates(items):
     """Return list of words from input list which were duplicates.
